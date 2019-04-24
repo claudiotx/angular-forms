@@ -27,6 +27,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/tachyons/css/tachyons.css",
               "src/styles.scss"
             ],
             "scripts": [],

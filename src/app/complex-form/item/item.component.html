@@ -1,0 +1,17 @@
+<form [formGroup]="itemForm">
+  <table>
+    <tr>
+      <td>
+        <input formControlName="name" placeholder="Name">
+      </td>
+      <td>
+        <input formControlName="value" placeholder="100">
+      </td>
+      <td>
+        <!-- emit delete event up w/ index of item -->
+        <button (click)="delete()">Delete</button>
+      </td>
+    </tr>
+  </table>
+  <pre>Item Form Status: <span class="status">{{itemForm.status}}</span></pre>
+</form>

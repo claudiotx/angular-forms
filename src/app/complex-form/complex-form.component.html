@@ -1,0 +1,15 @@
+<h1> Complex Form Example </h1>
+<form [formGroup]="groupForm" >
+  Form Title: {{groupForm.controls.title.value}}
+
+  <p>Items:</p>
+  <button (click)="addItem()">Add Item</button>
+  <ul>
+    <li *ngFor="let item of items?.controls; let i = index">
+      <app-item [index]="i" [itemForm]="item" (deleteItem)="deleteItem($event)"></app-item>
+    </li>
+  </ul>
+
+  <button  type="submit" (click)="saveGroup()" [disabled]="groupForm.invalid">Submit</button>
+  <pre>Group Form Status: <span class="status">{{groupForm.status}}</span></pre>
+</form>
